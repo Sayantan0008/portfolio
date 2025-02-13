@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
 
-// Also install this npm i --save-dev @types/react-lottie
 import Lottie from "react-lottie";
 
 import { cn } from "@/lib/utils";
@@ -37,7 +36,6 @@ export const BentoGridItem = ({
   id,
   title,
   description,
-  //   remove unecessary things here
   img,
   imgClassName,
   titleClassName,
@@ -52,8 +50,8 @@ export const BentoGridItem = ({
   titleClassName?: string;
   spareImg?: string;
 }) => {
-  const leftLists = ["ReactJS", "Express", "Typescript"];
-  const rightLists = ["VueJS", "NuxtJS", "GraphQL"];
+  const leftLists = [ "SQL", "Java", "Python",];
+  const rightLists = ["HTML", "CSS", "JavaScript"];
 
   const [copied, setCopied] = useState(false);
 
@@ -67,7 +65,7 @@ export const BentoGridItem = ({
   };
 
   const handleCopy = () => {
-    const text = "hsu@jsmastery.pro";
+    const text = "sayantanghatak08@gmail.com";
     navigator.clipboard.writeText(text);
     setCopied(true);
   };
@@ -80,8 +78,7 @@ export const BentoGridItem = ({
         className
       )}
       style={{
-        //   add these two
-        //   you can generate the color from here https://cssgradient.io/
+
         background: "rgb(4,7,29)",
         backgroundColor:
           "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",

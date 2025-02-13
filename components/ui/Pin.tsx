@@ -165,3 +165,20 @@ export const PinPerspective = ({
     </motion.div>
   );
 };
+
+interface PinProps {
+  isActive: boolean;
+}
+
+const Pin: React.FC<PinProps> = ({ isActive }) => {
+  return (
+    <a href="#" className="relative block">
+      <div className="flex items-center justify-center">
+        {/* Always render a wrapper <span> so that the structure never changes */}
+        <span className={isActive ? "bg-blue-500 rounded-full w-4 h-4" : "bg-gray-500 rounded-full w-4 h-4"} />
+      </div>
+    </a>
+  );
+};
+
+export default Pin;
